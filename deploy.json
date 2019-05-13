@@ -33,8 +33,8 @@
     },
     {
       "name": "pype",
-      "url": "https://tokejepsen@bitbucket.org/tokejepsen/pype.git",
-      "branch": "bugfix/2.0/develop/validate_required_modules_assetcreator"
+      "url": "https://bitbucket.org/pypeclub/pype.git",
+      "branch": "2.0/develop"
     },
     {
       "name": "pype-config",
@@ -49,6 +49,11 @@
 		{
       "name": "studiolibrary",
       "url": "https://github.com/krathjen/studiolibrary.git",
+      "branch": "master"
+    },
+		{
+      "name": "iDeform",
+      "url": "https://github.com/IngoClemens/iDeform.git",
       "branch": "master"
     }
   ],
