@@ -4,7 +4,7 @@
   "repositories": [{
       "name": "avalon-core",
       "url": "git@github.com:pypeclub/avalon-core.git",
-      "branch": "2.0/develop"
+      "branch": "develop"
     },
     {
       "name": "avalon-launcher",
@@ -33,12 +33,12 @@
     },
     {
       "name": "pype",
-      "url": "https://bitbucket.org/pypeclub/pype.git",
-      "branch": "2.0/develop"
+      "url": "git@bitbucket.org:tokejepsen/pype.git",
+      "branch": "develop"
     },
     {
       "name": "pype-config",
-      "url": "https://tokejepsen@bitbucket.org/tokejepsen/pype-config.git",
+      "url": "git@bitbucket.org:tokejepsen/pype-config.git",
       "branch": "bumpybox-config"
     },
 		{
@@ -55,6 +55,11 @@
       "name": "iDeform",
       "url": "https://github.com/IngoClemens/iDeform.git",
       "branch": "master"
+    },
+		{
+      "name": "bumpybox-environment",
+      "url": "https://github.com/bumpybox/bumpybox-environment.git",
+      "branch": "master"
     }
   ],
   "pip": [
@@ -67,12 +72,6 @@
     "Xlib",
     "pyqt5"
   ],
-	"zip_files": [
-		{
-			"name": "mgear",
-			"url": "https://github.com/mgear-dev/mgear_dist/releases/download/3.1.1/mgear_3.1.1.zip"
-		}
-	],
 	"archive_files": [
 		{
 		  "extract_path": "vendor/bin/ffmpeg_exec/windows",
