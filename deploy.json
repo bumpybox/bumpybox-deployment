@@ -1,6 +1,6 @@
 {
 	"PYPE_CONFIG": "{PYPE_ROOT}/repos/pype-config",
-  "init_env": ["global", "avalon", "deadline"],
+  "init_env": ["global", "avalon", "ftrack", "deadline"],
   "repositories": [{
       "name": "avalon-core",
       "url": "git@github.com:pypeclub/avalon-core.git",
@@ -11,14 +11,14 @@
       "url": "git@github.com:pypeclub/avalon-launcher.git",
       "branch": "develop"
     },
-    {
+		{
       "name": "pyblish-base",
-      "url": "https://github.com/pyblish/pyblish-base.git",
-      "branch": "master"
+      "url": "git@github.com:pypeclub/pyblish-base.git",
+      "branch": "develop"
     },
-    {
+		{
       "name": "pyblish-lite",
-      "url": "https://github.com/pyblish/pyblish-lite.git",
+      "url": "git@github.com:pypeclub/pyblish-lite.git",
       "branch": "master"
     },
     {
@@ -34,7 +34,7 @@
     {
       "name": "pype",
       "url": "git@bitbucket.org:tokejepsen/pype.git",
-      "branch": "develop"
+      "branch": "local_develop"
     },
     {
       "name": "pype-config",
@@ -59,6 +59,16 @@
 		{
       "name": "bumpybox-environment",
       "url": "https://github.com/bumpybox/bumpybox-environment.git",
+      "branch": "master"
+    },
+		{
+      "name": "ftrack-hooks",
+      "url": "https://github.com/tokejepsen/ftrack-hooks.git",
+      "branch": "master"
+    },
+		{
+      "name": "intersections-tool",
+      "url": "https://github.com/tokejepsen/intersections-tool.git",
       "branch": "master"
     }
   ],
