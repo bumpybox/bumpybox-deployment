@@ -38,7 +38,7 @@
     },
     {
       "name": "pype-config",
-      "url": "git@bitbucket.org:tokejepsen/pype-config.git",
+      "url": "git@bitbucket.org:pypeclub/pype-config.git",
       "branch": "bumpybox-config"
     },
 		{
