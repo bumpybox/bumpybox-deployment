@@ -42,7 +42,7 @@
       "branch": "bumpybox-config"
     },
 		{
-      "name": "mgear-dist",
+      "name": "mgear_dist",
       "url": "https://github.com/mgear-dev/mgear_dist",
       "branch": "master"
     },
