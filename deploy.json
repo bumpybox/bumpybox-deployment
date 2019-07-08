@@ -33,17 +33,17 @@
     },
     {
       "name": "pype",
-      "url": "git@bitbucket.org:pypeclub/pype.git",
-      "branch": "develop"
+      "url": "git@bitbucket.org:tokejepsen/pype.git",
+      "branch": "local_develop"
     },
     {
       "name": "pype-config",
-      "url": "git@bitbucket.org:pypeclub/pype-config.git",
+      "url": "git@bitbucket.org:tokejepsen/pype-config.git",
       "branch": "bumpybox-config"
     },
 		{
       "name": "mgear_dist",
-      "url": "https://github.com/mgear-dev/mgear_dist",
+      "url": "https://github.com/mgear-dev/mgear_dist.git",
       "branch": "master"
     },
 		{
