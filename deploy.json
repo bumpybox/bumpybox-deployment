@@ -3,7 +3,7 @@
   "init_env": ["global", "avalon", "ftrack", "deadline"],
   "repositories": [{
       "name": "avalon-core",
-      "url": "git@github.com:pypeclub/avalon-core.git",
+      "url": "https://github.com/pypeclub/core.git",
       "branch": "develop"
     },
     {
