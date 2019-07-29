@@ -4,7 +4,7 @@
   "repositories": [{
       "name": "avalon-core",
       "url": "https://github.com/pypeclub/core.git",
-      "branch": "develop"
+      "branch": "bumpybox_develop"
     },
     {
       "name": "avalon-launcher",
@@ -33,13 +33,13 @@
     },
     {
       "name": "pype",
-      "url": "git@bitbucket.org:tokejepsen/pype.git",
-      "branch": "local_develop"
+      "url": "git@bitbucket.org:pypeclub/pype.git",
+      "branch": "bumpybox_develop"
     },
     {
       "name": "pype-config",
-      "url": "git@bitbucket.org:tokejepsen/pype-config.git",
-      "branch": "bumpybox-config"
+      "url": "git@bitbucket.org:pypeclub/pype-config.git",
+      "branch": "bumpybox_develop"
     },
 		{
       "name": "mgear_dist",
@@ -64,6 +64,11 @@
 		{
       "name": "ftrack-hooks",
       "url": "https://github.com/tokejepsen/ftrack-hooks.git",
+      "branch": "master"
+    },
+		{
+      "name": "ftrack-event-plugins",
+      "url": "https://github.com/tokejepsen/ftrack-event-plugins.git",
       "branch": "master"
     },
 		{
