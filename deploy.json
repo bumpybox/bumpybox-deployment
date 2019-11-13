@@ -3,42 +3,37 @@
   "init_env": ["global", "avalon", "ftrack", "deadline"],
   "repositories": [{
       "name": "avalon-core",
-      "url": "https://github.com/pypeclub/core.git",
+      "url": "https://github.com/tokejepsen/core.git",
       "branch": "production"
     },
     {
       "name": "avalon-launcher",
-      "url": "git@github.com:pypeclub/avalon-launcher.git",
-      "branch": "develop"
+      "url": "https://github.com/tokejepsen/launcher.git",
+      "branch": "production"
     },
 		{
       "name": "pyblish-base",
-      "url": "git@github.com:pypeclub/pyblish-base.git",
-      "branch": "develop"
+      "url": "https://github.com/tokejepsen/pyblish-base.git",
+      "branch": "production"
     },
 		{
       "name": "pyblish-lite",
-      "url": "git@github.com:pypeclub/pyblish-lite.git",
-      "branch": "master"
-    },
-    {
-      "name": "pyblish-qml",
-      "url": "https://github.com/pyblish/pyblish-qml.git",
-      "branch": "master"
+      "url": "https://github.com/tokejepsen/pyblish-lite.git",
+      "branch": "production"
     },
     {
       "name": "maya-look-assigner",
-      "url": "git@github.com:pypeclub/maya-look-assigner.git",
-      "branch": "master"
+      "url": "https://github.com/tokejepsen/maya-look-assigner.git",
+      "branch": "production"
     },
     {
       "name": "pype",
-      "url": "git@bitbucket.org:pypeclub/pype.git",
+      "url": "git@bitbucket.org:tokejepsen/pype.git",
       "branch": "production"
     },
     {
       "name": "pype-config",
-      "url": "git@bitbucket.org:pypeclub/pype-config.git",
+      "url": "git@bitbucket.org:tokejepsen/pype-config.git",
       "branch": "production"
     },
 		{
@@ -70,11 +65,6 @@
       "name": "ftrack-event-plugins",
       "url": "https://github.com/tokejepsen/ftrack-event-plugins.git",
       "branch": "master"
-    },
-		{
-      "name": "intersections-tool",
-      "url": "https://github.com/tokejepsen/intersections-tool.git",
-      "branch": "master"
     }
   ],
   "pip": [
@@ -95,14 +85,14 @@
 		  "skip_first_subfolder": true
 		},
 		{
-		  "extract_path": "vendor/bin/ffmpeg_exec/linux",
-		  "url": "https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz",
-		  "archive_type": "tar.xz",
-		  "skip_first_subfolder": true
-		},
-		{
 		  "extract_path": "vendor/bin/mgear",
 		  "url": "https://github.com/mgear-dev/mgear_dist/releases/download/3.1.1/mgear_3.1.1.zip",
+		  "archive_type": "zip",
+		  "skip_first_subfolder": false
+		},
+		{
+		  "extract_path": "vendor/bin/image_magick",
+		  "url": "https://imagemagick.org/download/binaries/ImageMagick-7.0.8-68-portable-Q16-x64.zip",
 		  "archive_type": "zip",
 		  "skip_first_subfolder": false
 		}
