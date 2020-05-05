@@ -14,7 +14,7 @@ class ConnectFx(api.InventoryAction):
         target_container = pc.PyNode(containers[1]["objectName"])
 
         data = {}
-        for member in source_container.members():
+        for member in source_container.members(flatten=True):
             if member.nodeType() == "nucleus":
                 data["nucleus"] = member
 
@@ -40,13 +40,16 @@ class ConnectFx(api.InventoryAction):
             data[shape.cbId.get()].update({"target": shape})
 
         # Simulation controller.
-        controller = pc.spaceLocator(name=target_container.name() + "_controller")
+        controller = pc.spaceLocator(
+            name=target_container.name() + "_controller"
+        )
 
         controller.addAttr("startFrame")
         attribute = pc.PyNode(controller.name() + ".startFrame")
         attribute.set(channelBox=True)
         attribute >> data["nucleus"].startFrame
         controller.startFrame.set(-10)
+        data.pop("nucleus")
 
         controller.addAttr("blend")
         source_attribute = pc.PyNode(controller.name() + ".blend")
@@ -64,6 +67,13 @@ class ConnectFx(api.InventoryAction):
             plugs = nodes["source"].listConnections(
                 type="blendShape", plugs=True
             )
+
+            plugs.extend(
+                nodes["source"].listConnections(
+                    type="wrap", plugs=True
+                )
+            )
+
             if not plugs:
                 continue
 
