@@ -48,7 +48,7 @@ class ConnectFx(api.InventoryAction):
         attribute = pc.PyNode(controller.name() + ".startFrame")
         attribute.set(channelBox=True)
         attribute >> data["nucleus"].startFrame
-        controller.startFrame.set(-10)
+        controller.startFrame.set(-20)
         data.pop("nucleus")
 
         controller.addAttr("blend")
@@ -57,10 +57,10 @@ class ConnectFx(api.InventoryAction):
         source_attribute.set(keyable=True)
 
         pc.setKeyframe(
-            source_attribute, time=[1], value=1
+            source_attribute, time=[-10], value=1
         )
         pc.setKeyframe(
-            source_attribute, time=[-10], value=0
+            source_attribute, time=[-20], value=0
         )
 
         for id, nodes in data.iteritems():
