@@ -9,12 +9,21 @@ class ConnectFx(api.InventoryAction):
     icon = "mouse-pointer"
     color = "#d8d8d8"
 
+    def get_source_container(self, containers):
+        for container in containers:
+            members = pc.PyNode(container["objectName"]).members(flatten=True)
+            for member in members:
+                if member.nodeType() == "nucleus":
+                    return container
+
     def process(self, containers):
-        source_container = pc.PyNode(containers[0]["objectName"])
-        target_container = pc.PyNode(containers[1]["objectName"])
+        source_container = self.get_source_container(containers)
+        source_objectset = pc.PyNode(source_container["objectName"])
+        containers.remove(source_container)
+        target_objectset = pc.PyNode(containers[0]["objectName"])
 
         data = {}
-        for member in source_container.members(flatten=True):
+        for member in source_objectset.members(flatten=True):
             if member.nodeType() == "nucleus":
                 data["nucleus"] = member
 
@@ -23,7 +32,10 @@ class ConnectFx(api.InventoryAction):
 
             data[member.cbId.get()] = {"source": member}
 
-        for member in target_container.members():
+        msg = "No nucleus was found in {}".format(source_objectset)
+        assert "nucleus" in data, msg
+
+        for member in target_objectset.members():
             if member.nodeType() != "transform":
                 continue
 
@@ -41,7 +53,7 @@ class ConnectFx(api.InventoryAction):
 
         # Simulation controller.
         controller = pc.spaceLocator(
-            name=target_container.name() + "_controller"
+            name=target_objectset.name() + "_controller"
         )
 
         controller.addAttr("startFrame")
