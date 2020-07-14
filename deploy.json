@@ -57,11 +57,6 @@
       "branch": "master"
     },
 		{
-      "name": "ftrack-hooks",
-      "url": "https://github.com/tokejepsen/ftrack-hooks.git",
-      "branch": "master"
-    },
-		{
       "name": "ftrack-event-plugins",
       "url": "https://github.com/tokejepsen/ftrack-event-plugins.git",
       "branch": "master"
