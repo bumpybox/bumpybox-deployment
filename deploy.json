@@ -1,5 +1,5 @@
 {
-	"PYPE_CONFIG": "{PYPE_ROOT}/repos/pype-config",
+	"PYPE_CONFIG": "{PYPE_SETUP_PATH}/repos/pype-config",
   "init_env": ["global", "avalon", "ftrack", "deadline"],
   "repositories": [{
       "name": "avalon-core",
@@ -67,16 +67,7 @@
       "branch": "master"
     }
   ],
-  "pip": [
-    "colorama",
-    "six",
-    "toml",
-    "pymongo",
-    "gitpython",
-    "psutil",
-    "Xlib",
-    "pyqt5"
-  ],
+  "pip": [],
 	"archive_files": [
 		{
 		  "extract_path": "vendor/bin/ffmpeg_exec/windows",
